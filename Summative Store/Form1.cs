@@ -99,7 +99,7 @@ namespace Summative_Store
             //clear variables
             chalupa = 0;
             taco = 0;
-            friessupreme = 0;
+            friessupreme = 0; 
             
         }
     }
