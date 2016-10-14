@@ -29,9 +29,17 @@ namespace Summative_Store
         double tax;
         //Adds sounds in program 
         SoundPlayer chaChing = new SoundPlayer(Properties.Resources.Cha_Ching_Register_Muska666_173262285); 
+
+        //Adds Arial Font 
+        Graphics formGraphics;
+        SolidBrush whiteBrush = new SolidBrush(Color.White);
+        SolidBrush blackBrush = new SolidBrush(Color.Black);
+        Font arialFont9 = new Font("Arial", 9, FontStyle.Bold);
+
         public Form1()
         {
             InitializeComponent();
+            formGraphics = this.CreateGraphics();
         }
        
         private void TotalButton_Click(object sender, EventArgs e)
@@ -79,8 +87,15 @@ namespace Summative_Store
             Graphics formgraphics = this.CreateGraphics();
             SolidBrush ReceiptButton = new SolidBrush(Color.White);
             SolidBrush textBrush = new SolidBrush(Color.Black);
-            Font ReciptFont = new Font("Arial", 7, FontStyle.Bold);
+            Font ReciptFont = new Font("Arial", 9, FontStyle.Bold);
             formgraphics.FillRectangle(ReceiptButton, 240, 10, 270, 280);
+
+            formgraphics.DrawString("Taco Bell Inc.", arialFont9, blackBrush, 335, 20);
+            formgraphics.DrawString("Order Number 1096", arialFont9, blackBrush, 335, 32);
+            formgraphics.DrawString("October/17/2016", arialFont9,blackBrush, 335, 44);
+             
+              
+
 
 
         }
