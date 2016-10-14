@@ -98,8 +98,8 @@ namespace Summative_Store
             changeOutput.Text = "";
             //clear variables
             chalupa = 0;
-            taco = 0;
-            friessupreme = 0; 
+            taco = 0; 
+            friessupreme = 0;  
             
         }
     }
