@@ -27,6 +27,7 @@ namespace Summative_Store
         double totalCost;
         double cost;
         double tax;
+
         //Adds sounds in program 
         SoundPlayer chaChing = new SoundPlayer(Properties.Resources.Cha_Ching_Register_Muska666_173262285); 
 
@@ -42,6 +43,7 @@ namespace Summative_Store
             formGraphics = this.CreateGraphics();
         }
        
+        //Calculates Total for Order 
         private void TotalButton_Click(object sender, EventArgs e)
         {
             chalupa = Convert.ToInt32(chalupaText.Text);
@@ -87,19 +89,24 @@ namespace Summative_Store
             Graphics formgraphics = this.CreateGraphics();
             SolidBrush ReceiptButton = new SolidBrush(Color.White);
             SolidBrush textBrush = new SolidBrush(Color.Black);
-            Font ReciptFont = new Font("Arial", 9, FontStyle.Bold);
+            Font receiptFont = new Font("Consolas", 9, FontStyle.Bold);
             formgraphics.FillRectangle(ReceiptButton, 240, 10, 270, 280);
 
-            formgraphics.DrawString("Taco Bell Inc.", arialFont9, blackBrush, 335, 20);
-            formgraphics.DrawString("Order Number 1096", arialFont9, blackBrush, 335, 32);
-            formgraphics.DrawString("October/17/2016", arialFont9,blackBrush, 335, 44);
-             
-              
-
-
-
+            //Makes everything in the Receipt 
+            formgraphics.DrawString("Taco Bell Inc.", receiptFont, blackBrush, 315, 10);
+            formgraphics.DrawString("Order Number 1096", receiptFont, blackBrush, 315, 30);
+            formgraphics.DrawString("October/17/2016", receiptFont, blackBrush, 315, 50);
+            formgraphics.DrawString("Chalupa        x @    " + chalupa, receiptFont, blackBrush, 315, 70);
+            formgraphics.DrawString("Taco           x @    " + taco, receiptFont, blackBrush, 315, 90);
+            formgraphics.DrawString("Fries Supreme  x @    " + friessupreme, receiptFont, blackBrush, 315, 110);
+            formgraphics.DrawString("Subtotal              " + cost, receiptFont, blackBrush, 315, 130);
+            formgraphics.DrawString("Tax                   " + tax , receiptFont, blackBrush, 315, 150);
+            formgraphics.DrawString("Total                 " + totalCost , receiptFont, blackBrush, 315, 170);
+            formgraphics.DrawString("Tendered              " + change, receiptFont, blackBrush, 315, 190);
+            formgraphics.DrawString("Change                " + changeBack, receiptFont, blackBrush, 315, 210);
+            formgraphics.DrawString("Have a nice day!!!    ", receiptFont, blackBrush, 315, 230);
+            chaChing.Play();
         }
-
         private void newButton_Click(object sender, EventArgs e)
         {
             //clear labels and inputs
@@ -111,11 +118,15 @@ namespace Summative_Store
             friesText.Text = "";
             tenderedText.Text = "";
             changeOutput.Text = "";
+
             //clear variables
             chalupa = 0;
             taco = 0; 
-            friessupreme = 0;  
-            
+            friessupreme = 0;
+
+            Graphics formgraphics = this.CreateGraphics();
+            SolidBrush ReceiptButton = new SolidBrush(Color.White);
+            formgraphics.FillRectangle(ReceiptButton, 240, 10, 270, 280);
         }
     }
 }
