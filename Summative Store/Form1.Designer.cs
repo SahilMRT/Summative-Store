@@ -49,6 +49,7 @@
             this.totalOutput = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
+            this.tryCatchOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ChalupaLabel
@@ -251,12 +252,21 @@
             this.newButton.UseVisualStyleBackColor = true;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
+            // tryCatchOutput
+            // 
+            this.tryCatchOutput.AutoSize = true;
+            this.tryCatchOutput.Location = new System.Drawing.Point(372, 73);
+            this.tryCatchOutput.Name = "tryCatchOutput";
+            this.tryCatchOutput.Size = new System.Drawing.Size(0, 13);
+            this.tryCatchOutput.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(528, 380);
+            this.Controls.Add(this.tryCatchOutput);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.totalOutput);
@@ -307,6 +317,7 @@
         private System.Windows.Forms.Label totalOutput;
         private System.Windows.Forms.Label changeOutput;
         private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Label tryCatchOutput;
     }
 }
 
